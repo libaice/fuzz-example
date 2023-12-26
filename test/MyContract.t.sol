@@ -10,6 +10,7 @@ contract MyContractTest is Test {
 
     function setUp() public {
         exampleContract = new MyContract();
+        targetContract(address(exampleContract));
     }
 
     function testIsAlwaysZeroUnit() public {
