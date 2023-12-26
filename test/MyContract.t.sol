@@ -3,6 +3,7 @@ pragma solidity ^0.8.13;
 
 import {MyContract} from "../src/MyContract.sol";
 import {Test,console} from "forge-std/Test.sol";
+import {StdInvariant} from "forge-std/StdInvariant.sol";
 
 contract MyContractTest is Test {
     MyContract exampleContract;
@@ -38,8 +39,10 @@ contract MyContractTest is Test {
         assert(exampleContract.shouldAlwaysBeZero() == 0);
     }
 
+    function invariant_testAlwaysReturnsZero() public {
+        assert(exampleContract.shouldAlwaysBeZero() == 0);
+    }
 
-    
 
 }
 
