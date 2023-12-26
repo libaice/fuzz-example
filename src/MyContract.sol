@@ -14,7 +14,7 @@ contract MyContract {
         if (hiddenValue == 7) {
             shouldAlwaysBeZero = 1;
         }
-        
+
         hiddenValue = data;
     }
 }
